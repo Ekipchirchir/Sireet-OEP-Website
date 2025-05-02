@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sireet OEP empowers smallholder tea farmers in Nandi Hills, Kenya, with sustainable practices and vibrant communities." />
+  <meta name="keywords" content="Sireet OEP, tea farmers, Nandi Hills, sustainability, empowerment, Kenya, fair trade" />
+  <meta name="author" content="Sireet OEP" />
+  <meta property="og:title" content="Sireet OEP | Empowering Tea Farmers" />
+  <meta property="og:description" content="Join Sireet OEP in transforming lives through sustainable tea farming in Nandi Hills, Kenya." />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+  <meta property="og:url" content="https://sireetoep.co.ke" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Sireet OEP | Empowering Tea Farmers</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="manifest" href="manifest.json" />
+  <style>
+    :root {
+  --farmer-green: #2e7d32;
+  --farmer-white: #ffffff;
+  --farmer-cream: #f5f5f5;
+  --farmer-dark: #1a1a1a;
+  --farmer-shadow: rgba(26, 26, 26, 0.15);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background: var(--farmer-white);
+  color: var(--farmer-dark);
+  line-height: 1.8rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--farmer-dark);
+}
+
+/* Enhanced Header/Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  background: var(--farmer-white);
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 12px var(--farmer-shadow);
+  background: rgba(255, 255, 255, 0.445);
+  backdrop-filter: blur(8px);
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--farmer-dark);
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: lowercase;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: var(--farmer-green);
+  transform: translateY(-2px);
+}
+
+.nav-link i {
+  margin-right: 0.5rem;
+  color: var(--farmer-green);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover i {
+  color: var(--farmer-dark);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--farmer-green);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+}
+
+.logo-leaf {
+  margin-left: 0.5rem;
+  color: var(--farmer-green);
+  font-size: 1rem;
+  animation: leafPulse 2s infinite;
+}
+
+@keyframes leafPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--farmer-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: right 0.3s ease;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu a {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--farmer-dark);
+  margin: 1.5rem 0;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(10px);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: var(--farmer-green);
+  transform: translateY(-2px);
+}
+
+.mobile-menu a i {
+  margin-right: 0.5rem;
+  color: var(--farmer-green);
+}
+
+.mobile-menu.open a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hamburger {
+  font-size: 1.75rem;
+  color: var(--farmer-dark);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+/* Improved Hero Section */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background: var(--farmer-cream);
+  padding: 3rem 1rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 500px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px var(--farmer-shadow);
+  transition: transform 0.5s ease;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.hero-image:hover {
+  transform: translateY(-5px);
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Ensure hero buttons are visible */
+.hero-buttons {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.hero-buttons a {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Unified Button Styling */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: var(--farmer-green);
+  color: var(--farmer-white);
+  padding: 0.75rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--farmer-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(26, 26, 26, 0.2);
+}
+
+.btn-primary i {
+  margin-right: 0.5rem;
+}
+
+.btn-secondary {
+  border: 2px solid var(--farmer-green);
+  color: var(--farmer-green);
+  padding: 0.75rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover {
+  background: var(--farmer-green);
+  color: var(--farmer-white);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+.btn-primary span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* General Section Styling */
+.section {
+  padding: 5rem 1rem;
+  background: var(--farmer-cream);
+}
+
+.section:nth-child(odd) {
+  background: var(--farmer-white);
+}
+
+.section-divider {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: var(--farmer-green);
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 60%, 0 30%);
+}
+
+.section-title {
+  position: relative;
+  font-weight: 700;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 2.25rem;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 8px;
+  background: var(--farmer-green);
+  border-radius: 4px;
+}
+
+.card {
+  background: var(--farmer-white);
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  will-change: transform, opacity;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px var(--farmer-shadow);
+}
+
+@media (min-width: 640px) {
+  .hero-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-title {
+    font-size: 1.25rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+  }
+
+  .hero-image {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-image {
+    max-width: 600px;
+    height: 550px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 0.9375rem;
+  }
+
+  .hero p {
+    font-size: 0.875rem;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    height: 300px;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .hero-image {
+    height: 250px;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+}
+
+/* Additional Component Styles */
+.progress-container {
+  width: 100%;
+  background: var(--farmer-cream);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  height: 1rem;
+  background: var(--farmer-green);
+  width: 0;
+  transition: width 2s ease;
+}
+
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--farmer-green);
+  color: var(--farmer-white);
+  padding: 1rem 0;
+  z-index: 1000;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.sticky-cta.show {
+  transform: translateY(0);
+}
+
+.chat-btn, .back-to-top {
+  position: fixed;
+  background: var(--farmer-green);
+  color: var(--farmer-white);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px var(--farmer-shadow);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.chat-btn {
+  bottom: 24px;
+  right: 24px;
+}
+
+.back-to-top {
+  bottom: 96px;
+  right: 24px;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chat-btn:hover, .back-to-top:hover {
+  background: var(--farmer-dark);
+  transform: scale(1.1);
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--farmer-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cookie-consent {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: var(--farmer-white);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px var(--farmer-shadow);
+  z-index: 1000;
+  max-width: 360px;
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  color: var(--farmer-dark);
+}
+
+.gallery-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit.overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+
+.gallery-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-carousel::-webkit-scrollbar-thumb {
+  background: var(--farmer-green);
+  border-radius: 4px;
+}
+
+.gallery-carousel::-webkit-scrollbar-track {
+  background: var(--farmer-cream);
+}
+
+.gallery-image {
+  flex: 0 0 300px;
+  margin-right: 1rem;
+  scroll-snap-align: start;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.gallery-image img {
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.gallery-image:hover img {
+  transform: scale(1.1);
+}
+
+.faq-card {
+  background: var(--farmer-white);
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--farmer-shadow);
+}
+
+.faq-header {
+  cursor: pointer;
+  padding: 1.5rem;
+  background: var(--farmer-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.faq-header:hover {
+  background: var(--farmer-cream);
+}
+
+.faq-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--farmer-dark);
+}
+
+.faq-header i {
+  color: var(--farmer-green);
+  transition: transform 0.3s ease;
+}
+
+.faq-header.open i {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1.5rem;
+  background: var(--farmer-cream);
+}
+
+.faq-content.open {
+  max-height: 400px;
+  padding: 1.5rem;
+}
+
+footer {
+  background: var(--farmer-dark);
+  color: var(--farmer-white);
+  padding: 2rem 0;
+}
+
+footer p, footer h4, footer a, footer i {
+  color: var(--farmer-white);
+}
+
+.footer-links a:hover, .footer-links i:hover {
+  color: var(--farmer-green);
+  transform: translateX(5px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .section-title, .hero-title, .hero p, .btn-primary, .btn-secondary, .section-divider, footer a, .gallery-image img, .progress-bar, .sticky-cta, .mobile-menu {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="preloader" id="preloader">
+    <div class="animate-pulse text-6xl text-green-400"><i class="fas fa-leaf"></i></div>
+  </div>
+
+  <div class="cookie-consent hidden" id="cookieConsent">
+    <p class="text-base">We use cookies to enhance your experience. <a href="#" class="text-green-400 hover:underline">Learn More</a></p>
+    <div class="flex space-x-4 mt-4">
+      <button onclick="acceptCookies()" class="btn-primary">Accept</button>
+      <button onclick="customizeCookies()" class="btn-secondary">Customize</button>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="#" class="logo-container" aria-label="Sireet OEP Home">
+        <img src="assets/images/logo.png" alt="Sireet OEP Logo" class="h-12 sm:h-14" />
+        <i class="fas fa-leaf logo-leaf"></i>
+      </a>
+      <div class="hidden lg:flex items-center space-x-4 xl:space-x-6">
+        <a href="#home" class="nav-link"><i class="fas fa-home"></i>HOME</a>
+        <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i>ABOUT</a>
+        <a href="#projects" class="nav-link"><i class="fas fa-seedling"></i>PROJECTS</a>
+        <a href="#gallery" class="nav-link"><i class="fas fa-image"></i>GALLERY</a>
+        <a href="#downloads" class="nav-link"><i class="fas fa-download"></i>RESOURCES</a>
+        <a href="#blog" class="nav-link"><i class="fas fa-rss"></i>NEWS</a>
+        <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i>CONTACT</a>
+        <a href="farmers.html" class="btn-primary"><i class="fas fa-leaf"></i>FARMERS' HUB</a>
+      </div>
+      <button class="lg:hidden hamburger" onclick="toggleMenu()" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="mobile-menu hidden lg:hidden" id="mobileMenu">
+        <button class="absolute top-6 right-6 hamburger" onclick="toggleMenu()" aria-label="Close mobile menu">
+          <i class="fas fa-times"></i>
+        </button>
+        <a href="#home" class="nav-link"><i class="fas fa-home"></i>Home</a>
+        <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i>About</a>
+        <a href="#projects" class="nav-link"><i class="fas fa-seedling"></i>Projects</a>
+        <a href="#gallery" class="nav-link"><i class="fas fa-image"></i>Gallery</a>
+        <a href="#downloads" class="nav-link"><i class="fas fa-download"></i>Resources</a>
+        <a href="#blog" class="nav-link"><i class="fas fa-rss"></i>News</a>
+        <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i>Contact </a>
+        <a href="farmers.html" class="btn-primary"><i class="fas fa-leaf"></i>FARMERS' HUB</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="sticky-cta hidden" id="stickyCta">
+    <div class="container mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-center items-center gap-4">
+      <p class="text-lg text-center sm:mr-4">Join our Farmers’ Hub for exclusive resources!</p>
+      <a href="farmers.html" class="btn-primary tooltip" data-tooltip="Join Farmers’ Hub"><i class="fas fa-leaf"></i>Farmers’ Hub</a>
+    </div>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-image">
+        <img src="assets/images/hero-1.png" alt="Hero Image" loading="lazy" />
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-title">Welcome to Sireet OEP</h1>
+        <p class="hero-subtitle">Sireet OEP Empowerment & Producer Co Ltd</p>
+        <div class="flex flex-col sm:flex-row justify-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-6 hero-buttons">
+          <a href="#about" class="btn-primary tooltip" data-tooltip="Discover Us"></i>Discover Us</a>
+          <a href="#contact" class="btn-secondary tooltip" data-tooltip="Connect With Us"></i>Connect With Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section relative">
+    <div class="section-divider"></div>
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="section-title">ABOUT US</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+        <div class="content-text">
+          <h3 class="text-2xl font-semibold mb-4">Sireet OEP, By farmers for Farmers</h3>
+          <p class="text-lg mb-4">Sireet Outgrowers Empowerment Project Company Limited (Sireet OEP) is a Fairtrade certified tea producer based in Nandi Hills, Kenya, specializing in providing high-quality, disease-resistant seedlings to help you establish a thriving farm.</p>
+          <p class="text-lg mb-4">“We partner with farmers by providing expert advice and reliable varieties tailored to your climate and soil.”</p>
+          <h4 class="text-xl font-semibold mb-2">Rooted in Excellence</h4>
+          <p class="text-lg mb-4">Premium seedlings = stronger crops, bigger harvests.</p>
+          <h4 class="text-xl font-semibold mb-2">Harvesting Success</h4>
+          <p class="text-lg mb-4">Grow profit. Grow green.</p>
+          <a href="#contact" class="text-green-400 hover:text-dark-900 font-medium text-base tooltip" data-tooltip="Learn More">More About <i class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+        <div class="content-media">
+          <img src="assets/images/about.png" alt="About Sireet OEP" class="w-full h-80 object-cover rounded-xl shadow-lg" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="impact" class="section relative">
+    <div class="section-divider"></div>
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="section-title">Our Impact</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div class="card p-6 text-center">
+          <h3 class="text-4xl font-bold text-green-400 mb-2" id="yearsExperience">0</h3>
+          <p class="text-lg">Years of Experience</p>
+          <div class="progress-container">
+            <div class="progress-bar" id="yearsProgress"></div>
+          </div>
+        </div>
+        <div class="card p-6 text-center">
+          <h3 class="text-4xl font-bold text-green-400 mb-2" id="awardWinning">0</h3>
+          <p class="text-lg">Award Winning Products</p>
+          <div class="progress-container">
+            <div class="progress-bar" id="awardProgress"></div>
+          </div>
+        </div>
+        <div class="card p-6 text-center">
+          <h3 class="text-4xl font-bold text-green-400 mb-2" id="satisfiedCustomers">0</h3>
+          <p class="text-lg">Satisfied Customers</p>
+          <div class="progress-container">
+            <div class="progress-bar" id="customerProgress"></div>
+          </div>
+        </div>
+        <div class="card p-6 text-center">
+          <h3 class="text-4xl font-bold text-green-400 mb-2" id="projectsComplete">0</h3>
+          <p class="text-lg">Projects Complete</p>
+          <div class="progress-container">
+            <div class="progress-bar" id="projectProgress"></div>
+          </div>
+        </div>
+        <div class="card p-6 text-center">
+          <h3 class="text-4xl font-bold text-green-400 mb-2" id="happyCustomers">500</h3>
+          <p class="text-lg">+Happy Customers</p>
+          <div class="progress-container">
+            <div class="progress-bar" id="happyProgress"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section relative">
+    <div class="section-divider"></div>
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="section-title">SERVICES</h2>
+      <div class="relative overflow-hidden">
+        <div class="flex transition-transform duration-500" id="projectCarousel">
+          <div class="card flex-shrink-0 w-full sm:w-1/2 md:w-1/3 mx-4">
+            <img src="assets/images/image1.jpg" alt="Giant Bamboo Seedlings" class="w-full h-64 object-cover rounded-t-xl" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Giant Bamboo Seedlings</h3>
+              <p class="text-lg">Ideal for timber, erosion control, and sustainable construction.</p>
+            </div>
+          </div>
+          <div class="card flex-shrink-0 w-full sm:w-1/2 md:w-1/3 mx-4">
+            <img src="assets/images/image5.jpg" alt="Grafted Hass Avocados" class="w-full h-64 object-cover rounded-t-xl" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Grafted Hass Avocados</h3>
+              <p class="text-lg">High-yielding, superior-quality fruits with excellent shelf life.</p>
+            </div>
+          </div>
+          <div class="card flex-shrink-0 w-full sm:w-1/2 md:w-1/3 mx-4">
+            <img src="assets/images/image15.jpg" alt="Tea & Coffee Seedlings" class="w-full h-64 object-cover rounded-t-xl" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Tea & Coffee Seedlings</h3>
+              <p class="text-lg">Premium varieties for high-grade production. From soil to sip: quality seedlings.</p>
+            </div>
+          </div>
+          <div class="card flex-shrink-0 w-full sm:w-1/2 md:w-1/3 mx-4">
+            <img src="assets/images/image6.jpg" alt="Farmer Support Services" class="w-full h-64 object-cover rounded-t-xl" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Farmer Support Services</h3>
+              <p class="text-lg">Providing artificial insemination services and farm inputs like herbicides to enhance productivity.</p>
+            </div>
+          </div>
+        </div>
+        <button class="absolute top-1/2 left-4 transform -translate-y-1/2 btn-primary" onclick="moveProjectCarousel(-1)">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="absolute top-1/2 right-4 transform -translate-y-1/2 btn-primary" onclick="moveProjectCarousel(1)">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="stories" class="section relative">
+    <div class="section-divider"></div>
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="section-title">Farmer Stories</h2>
+      <div class="relative overflow-hidden">
+        <div class="flex transition-transform duration-500" id="storiesCarousel">
+          <div class="card flex-shrink-0 w-full sm:w-1/2 md:w-1/3 mx-4">
+            <div class="p-6">
+              <p class="text-lg italic">"Sireet OEP doubled my yield!"</p>
+              <p class="font-medium mt-2">— Jane, Tea Farmer</p>
+            </div>
+          </div>
+          <div class="card flex-shrink-0 w-full sm:w-1/2 md:w-1/3 mx-4">
+            <div class="p-6">
+              <p class="text-lg italic">"Fair prices changed my life."</p>
+              <p class="font-medium mt-2">— Peter, Tea Farmer</p>
+            </div>
+          </div>
+          <div class="card flex-shrink-0 w-full sm:w-1/2 md:w-1/3 mx-4">
+            <div class="p-6">
+              <p class="text-lg italic">"The dispensary helps us thrive."</p>
+              <p class="font-medium mt-2">— Mary, Tea Farmer</p>
+            </div>
+          </div>
+        </div>
+        <button class="absolute top-1/2 left-4 transform -translate-y-1/2 btn-primary" onclick="moveStoriesCarousel(-1)">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="absolute top-1/2 right-4 transform -translate-y-1/2 btn-primary" onclick="moveStoriesCarousel(1)">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section relative">
+    <div class="section-divider"></div>
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="section-title">Our Gallery</h2>
+      <div class="gallery-carousel">
+        <div class="gallery-image">
+          <img src="assets/images/image4.jpg" alt="Gallery Image 1" loading="lazy" />
+        </div>
+        <div class="gallery-image">
+          <img src="assets/images/image5.jpg" alt="Gallery Image 2" loading="lazy" />
+        </div>
+        <div class="gallery-image">
+          <img src="assets/images/image6.jpg" alt="Gallery Image 3" loading="lazy" />
+        </div>
+        <div class="gallery-image">
+          <img src="assets/images/image7.png" alt="Gallery Image 4" loading="lazy" />
+        </div>
+        <div class="gallery-image">
+          <img src="assets/images/image8.jpg" alt="Gallery Image 5" loading="lazy" />
+        </div>
+        <div class="gallery-image">
+          <img src="assets/images/image9.jpg" alt="Gallery Image 6" loading="lazy" />
+        </div>
+        <div class="gallery-image">
+          <img src="assets/images/image10.jpg" alt="Gallery Image 7" loading="lazy" />
+        </div>
+        <div class="gallery-image">
+          <img src="assets/images/image11.jpg" alt="Gallery Image 7" loading="lazy" />
+        </div>
+        <div class="gallery-image">
+          <img src="assets/images/image12.jpg" alt="Gallery Image 7" loading="lazy" />
+        </div>
+        <div class="gallery-image">
+          <img src="assets/images/image13.jpg" alt="Gallery Image 7" loading="lazy" />
+        </div>
+        <div class="gallery-image">
+          <img src="assets/images/image14.jpg" alt="Gallery Image 7" loading="lazy" />
+        </div>
+        <div class="gallery-image">
+          <img src="assets/images/image16.jpg" alt="Gallery Image 7" loading="lazy" />
+        </div>
+        <div class="gallery-image">
+          <img src="assets/images/image17.jpg" alt="Gallery Image 7" loading="lazy" />
+        </div>
+        <div class="gallery-image">
+          <img src="assets/images/Sireet-Tea-Factory.webp" alt="Gallery Image 7" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="map" class="section relative">
+    <div class="section-divider"></div>
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="section-title">Our Impact Map</h2>
+      <div class="card p-6 sm:p-8">
+        <img src="assets/images/map.jpg" alt="Nandi Hills Map" class="w-full h-80 sm:h-96 object-cover rounded-xl" loading="lazy" />
+        <p class="mt-4 text-lg">Explore our projects in Nandi Hills.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="downloads" class="section relative">
+    <div class="section-divider"></div>
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="section-title">Downloads & Reports</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <a href="assets/pdfs/annual_report_2024.pdf" target="_blank" class="card p-6 flex items-center">
+          <i class="fas fa-file-pdf text-4xl text-green-400 mr-4"></i>
+          <div>
+            <h4 class="text-xl font-semibold">Annual Report 2024</h4>
+            <p class="text-lg">Yearly achievements.</p>
+          </div>
+        </a>
+        <a href="assets/pdfs/farmer_handbook.pdf" target="_blank" class="card p-6 flex items-center">
+          <i class="fas fa-file-pdf text-4xl text-green-400 mr-4"></i>
+          <div>
+            <h4 class="text-xl font-semibold">Farmer Handbook</h4>
+            <p class="text-lg">Sustainable farming guide.</p>
+          </div>
+        </a>
+        <a href="assets/pdfs/sustainability_report_2024.pdf" target="_blank" class="card p-6 flex items-center">
+          <i class="fas fa-file-pdf text-4xl text-green-400 mr-4"></i>
+          <div>
+            <h4 class="text-xl font-semibold">Sustainability Report 2024</h4>
+            <p class="text-lg">Environmental initiatives.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="section relative">
+    <div class="section-divider"></div>
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="section-title">Latest News & Updates</h2>
+      <div class="flex justify-center mb-8 space-x-3 flex-wrap gap-3">
+        <button class="btn-primary" onclick="filterBlog('all')">All</button>
+        <button class="btn-secondary" onclick="filterBlog('training')">Training</button>
+        <button class="btn-secondary" onclick="filterBlog('facility')">Facility</button>
+        <button class="btn-secondary" onclick="filterBlog('community')">Community</button>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="blog-card" data-category="training">
+          <img src="assets/images/image13.jpg" alt="Blog 1" loading="lazy" />
+          <div class="content p-6">
+            <h3 class="text-xl font-semibold mb-2">New Training Program</h3>
+            <p class="text-sm text-gray-600 mb-3">Climate-smart farming for 2025.</p>
+            <a href="blog-post1.html" class="text-green-400 hover:text-dark-900 text-base">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+        <div class="blog-card" data-category="facility">
+          <img src="assets/images/Sireet-Tea-Factory.webp" alt="Blog 2" loading="lazy" />
+          <div class="content p-6">
+            <h3 class="text-xl font-semibold mb-2">Factory Upgrade</h3>
+            <p class="text-sm text-gray-600 mb-3">Enhancing tea quality.</p>
+            <a href="blog-post2.html" class="text-green-400 hover:text-dark-900 text-base">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+        <div class="blog-card" data-category="community">
+          <img src="assets/images/image8.jpg" alt="Blog 3" loading="lazy" />
+          <div class="content p-6">
+            <h3 class="text-xl font-semibold mb-2">Kipkoror Community Dispensary</h3>
+            <p class="text-sm text-gray-600 mb-3">New health facility opened.</p>
+            <a href="blog-post3.html" class="text-green-400 hover:text-dark-900 text-base">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+        <div class="blog-card" data-category="community">
+          <img src="assets/images/image9.jpg" alt="Blog 4" loading="lazy" />
+          <div class="content p-6">
+            <h3 class="text-xl font-semibold mb-2">Community Outreach -Kaplamai Vocational Training Centre</h3>
+            <p class="text-sm text-gray-600 mb-3">Supporting local initiatives.</p>
+            <a href="blog-post4.html" class="text-green-400 hover:text-dark-900 text-base">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section relative">
+    <div class="section-divider"></div>
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="section-title text-center">Frequently Asked Questions</h2>
+      <div class="max-w-3xl mx-auto space-y-4 mt-8">
+        <div class="faq-card">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <h3><i class="fas fa-question-circle mr-2 text-green-400"></i>How does Sireet OEP support farmers?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p class="text-lg">We provide training, fair market access, sustainable practices, artificial insemination services, farm inputs, and bursaries to 6,235 farmers (with some records indicating up to 8,017 members).</p>
+          </div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <h3><i class="fas fa-question-circle mr-2 text-green-400"></i>What is the tea production capacity?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p class="text-lg">Our factory processes 98,000 kg of green leaf daily, supplying tea to six EPK factories: Kapsumbeiwa, Kepchomo, Chemomi, Savani, Siret, and Kibwari.</p>
+          </div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <h3><i class="fas fa-question-circle mr-2 text-green-400"></i>How can I get involved?</h3>
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-content">
+            <p class="text-lg">Contact us to explore partnership, volunteer opportunities, or visit our guest house and job opportunities sections.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section relative">
+    <div class="section-divider"></div>
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="section-title text-center">LET'S COLLABORATE</h2>
+      <p class="text-center text-xl mb-6">Let's Work Together</p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+        <div class="content-text">
+          <div class="contact-form space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              <input type="text" id="name" class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-200 text-base" placeholder="Your Name" required />
+              <input type="email" id="email" class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-200 text-base" placeholder="Enter Email" required />
+            </div>
+            <textarea id="message" class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-200 text-base" rows="6" placeholder="Your Message" required></textarea>
+            <button onclick="submitContactForm()" class="btn-primary w-full sm:w-auto"><i class="fas fa-paper-plane"></i>Subscribe</button>
+          </div>
+          <p class="text-center mt-4 text-lg">Subscribe to Our Newsletter</p>
+        </div>
+        <div class="content-text space-y-6">
+          <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-map-marker-alt text-2xl text-green-400"></i>
+            <p class="text-lg">Sireet OEP, Nandi Hills Sireet OEP Plaza</p>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-phone text-2   xl text-green-400"></i>
+            <p class="text-lg">0789 508040</p>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-envelope text-2xl text-green-400"></i>
+            <p class="text-lg"><a href="/cdn-cgi/l/email-protection#0e6f6a6367604e7d677c6b6b7a616b7e206d6120656b" class="text-green-400 hover:text-dark-900"><span class="__cf_email__" data-cfemail="2367020b0f0826504a515656475c56430d404c0d4846">admin@sireetoep.co.ke</span></a></p>
+          </div>
+          <div class="flex space-x-6">
+            <a href="https://instagram.com/sireetoep" target="_blank" class="text-2xl hover:text-green-400"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/sireetoep" target="_blank" class="text-2xl hover:text-green-400"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/sireetoep" target="_blank" class="text-2xl hover:text-green-400"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/company/sireetoep" target="_blank" class="text-2xl hover:text-green-400"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <div class="card p-6">
+            <h4 class="text-xl font-semibold mb-2">Sireet OEP Guest House</h4>
+            <p class="text-lg">Looking for a place to stay in Nandi Hills? Our guest house offers comfortable accommodations for visitors. Contact us to book your stay.</p>
+          </div>
+          <div class="card p-6">
+            <h4 class="text-xl font-semibold mb-2">Job Opportunities</h4>
+            <p class="text-lg">Join our team! We’re always looking for passionate individuals to support our mission. Check for available positions or send your CV to <a href="/cdn-cgi/l/email-protection#0e6f6a6367604e7d677c6b6b7a616b7e206d6120656b" class="text-green-400 hover:text-dark-900"><span class="__cf_email__" data-cfemail="2367020b0f0826504a515656475c56430d404c0d4846">admin@sireetoep.co.ke</span></a>.</p>
+          </div>
+          <div class="card p-6">
+            <h4 class="text-xl font-semibold mb-2">Nandi Hills Weather</h4>
+            <p class="flex items-center text-lg" id="weather"><i class="fas fa-cloud-sun mr-2 animate-pulse"></i>Loading...</p>
+          </div>
+          <div class="card p-6">
+            <h4 class="text-xl font-semibold mb-2">Live Tea Price</h4>
+            <p class="mb-2 animate-pulse text-lg" id="teaPrice">$1.80/kg</p>
+            <canvas id="teaPriceChart" height="120"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="social" class="section relative">
+    <div class="section-divider"></div>
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="section-title">Our Community on X</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="card social-card p-6">
+          <p class="mb-2 text-lg">New dispensary opened! #SireetOEP</p>
+          <p class="text-sm">Posted on X, May 1, 2025</p>
+          <button class="text-green-400 hover:text-dark-900 mt-2 text-base"><i class="fas fa-heart mr-1"></i>Like</button>
+        </div>
+        <div class="card social-card p-6">
+          <p class="mb-2 text-lg">Training 500 farmers! #SustainableTea</p>
+          <p class="text-sm">Posted on X, Apr 28, 2025</p>
+          <button class="text-green-400 hover:text-dark-900 mt-2 text-base"><i class="fas fa-heart mr-1"></i>Like</button>
+        </div>
+        <div class="card social-card p-6">
+          <p class="mb-2 text-lg">Our tea wins award! #NandiHills</p>
+          <p class="text-sm">Posted on X, Apr 25, 2025</p>
+          <button class="text-green-400 hover:text-dark-900 mt-2 text-base"><i class="fas fa-heart mr-1"></i>Like</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 relative" style="background: var(--farmer-dark);">
+    <div class="section-divider"></div>
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12">
+        <div>
+          <img src="assets/images/logo.png" alt="Sireet OEP Logo" class="h-16 sm:h-20 mb-6" />
+          <p class="text-base" style="color: var(--farmer-white);">Sireet Outgrowers Empowerment & Co Ltd</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-6" style="color: var(--farmer-white);">Quick Links</h4>
+          <ul class="space-y-4 footer-links">
+            <li><a href="#about" class="text-base" style="color: var(--farmer-white);">About Us</a></li>
+            <li><a href="#projects" class="text-base" style="color: var(--farmer-white);">Services</a></li>
+            <li><a href="#gallery" class="text-base" style="color: var(--farmer-white);">Gallery</a></li>
+            <li><a href="#downloads" class="text-base" style="color: var(--farmer-white);">Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-6" style="color: var(--farmer-white);">Resources</h4>
+          <ul class="space-y-4 footer-links">
+            <li><a href="#blog" class="text-base" style="color: var(--farmer-white);">News</a></li>
+            <li><a href="#contact" class="text-base" style="color: var(--farmer-white);">Contact Us</a></li>
+            <li><a href="farmers.html" class="text-base" style="color: var(--farmer-white);">Farmers’ Hub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-6" style="color: var(--farmer-white);">Connect With Us</h4>
+          <div class="flex space-x-6 footer-links">
+            <a href="https://instagram.com/sireetoep" target="_blank"><i class="fab fa-instagram text-2xl" style="color: var(--farmer-white);"></i></a>
+            <a href="https://facebook.com/sireetoep" target="_blank"><i class="fab fa-facebook-f text-2xl" style="color: var(--farmer-white);"></i></a>
+            <a href="https://twitter.com/sireetoep" target="_blank"><i class="fab fa-twitter text-2xl" style="color: var(--farmer-white);"></i></a>
+            <a href="https://linkedin.com/company/sireetoep" target="_blank"><i class="fab fa-linkedin-in text-2xl" style="color: var(--farmer-white);"></i></a>
+            <a href="https://wa.me/+254789508040" target="_blank"><i class="fab fa-whatsapp text-2xl" style="color: var(--farmer-white);"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white-800 mt-8 pt-6 text-center">
+        <p class="text-base" style="color: var(--farmer-white);">Copyright © 2025 All Rights Reserved.</p>
+        <p class="text-base mt-2" style="color: var(--farmer-white);">Sireet OEP, Nandi Hills Sireet OEP Plaza</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-chevron-up text-2xl"></i></a>
+  <a href="https://wa.me/+254789508040" class="chat-btn" target="_blank"><i class="fab fa-whatsapp text-3xl"></i></a>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('preloader').classList.add('hidden');
+      }, 1200);
+    });
+
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      const backToTop = document.getElementById('backToTop');
+      const stickyCta = document.getElementById('stickyCta');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      backToTop.classList.toggle('show', window.scrollY > 300);
+      stickyCta.classList.toggle('show', window.scrollY > 600);
+    });
+
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const isOpen = !menu.classList.contains('open');
+      menu.classList.toggle('open');
+      menu.classList.toggle('hidden');
+      gsap.to(menu, { right: isOpen ? '0' : '-100%', duration: 0.3, ease: 'power2.out' });
+      gsap.to(menu.querySelectorAll('a'), {
+        y: isOpen ? 0 : 10,
+        opacity: isOpen ? 1 : 0,
+        duration: 0.3,
+        stagger: 0.05,
+        ease: 'power2.out'
+      });
+    }
+
+    function acceptCookies() {
+      document.getElementById('cookieConsent').classList.add('hidden');
+      localStorage.setItem('cookiesAccepted', 'true');
+    }
+    function customizeCookies() {
+      alert('Customize cookie preferences (coming soon).');
+    }
+    if (!localStorage.getItem('cookiesAccepted')) {
+      setTimeout(() => {
+        document.getElementById('cookieConsent').classList.remove('hidden');
+      }, 1200);
+    }
+
+    function submitContactForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if (name && email && message && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        gsap.to('#contact', {
+          opacity: 0,
+          duration: 0.4,
+          onComplete: () => {
+            alert('Subscribed! Thank you for joining our newsletter.');
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+            gsap.to('#contact', { opacity: 1, duration: 0.4 });
+          }
+        });
+      } else {
+        alert('Please fill in all fields correctly.');
+      }
+    }
+
+    let projectIndex = 0;
+    const projectCarousel = document.getElementById('projectCarousel');
+    function moveProjectCarousel(direction) {
+      const items = projectCarousel.children;
+      projectIndex = (projectIndex + direction + items.length) % items.length;
+      gsap.to(projectCarousel, {
+        x: -projectIndex * (33.33 + 2) + '%',
+        duration: 0.6,
+        ease: 'power2.out'
+      });
+    }
+
+    let storiesIndex = 0;
+    const storiesCarousel = document.getElementById('storiesCarousel');
+    function moveStoriesCarousel(direction) {
+      const items = storiesCarousel.children;
+      storiesIndex = (storiesIndex + direction + items.length) % items.length;
+      gsap.to(storiesCarousel, {
+        x: -storiesIndex * (33.33 + 2) + '%',
+        duration: 0.6,
+        ease: 'power2.out'
+      });
+    }
+
+    if (!prefersReducedMotion) {
+      setInterval(() => {
+        moveStoriesCarousel(1);
+      }, 5000);
+    }
+
+    function animateCounter(id, end, suffix = '') {
+      let start = 0;
+      const element = document.getElementById(id);
+      const duration = 1500;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        element.textContent = Math.floor(progress * end).toLocaleString() + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      let startTimestamp = null;
+      requestAnimationFrame(step);
+    }
+
+    function animateProgressBars() {
+      document.getElementById('yearsProgress').style.width = '80%';
+      document.getElementById('awardProgress').style.width = '70%';
+      document.getElementById('customerProgress').style.width = '90%';
+      document.getElementById('projectProgress').style.width = '60%';
+      document.getElementById('happyProgress').style.width = '85%';
+    }
+
+    function toggleFaq(element) {
+      const content = element.nextElementSibling;
+      const isOpen = content.classList.contains('open');
+      document.querySelectorAll('.faq-content').forEach(item => {
+        item.classList.remove('open');
+      });
+      document.querySelectorAll('.faq-header').forEach(item => {
+        item.classList.remove('open');
+      });
+      if (!isOpen) {
+        content.classList.add('open');
+        element.classList.add('open');
+        gsap.fromTo(content, { x: -10, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: 'power2.out' });
+      }
+    }
+
+    const teaPriceChart = new Chart(document.getElementById('teaPriceChart'), {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+        datasets: [{
+          label: 'Tea Price ($/kg)',
+          data: [1.75, 1.78, 1.80, 1.79, 1.80],
+          borderColor: '#2e7d32',
+          backgroundColor: 'rgba(46, 125, 50, 0.2)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        scales: { y: { beginAtZero: false } },
+        plugins: { legend: { display: false } }
+      }
+    });
+
+    document.getElementById('weather').innerHTML = '<i class="fas fa-cloud-sun mr-2 animate-pulse"></i> Nandi Hills: 22°C, Partly Cloudy';
+
+    if (!prefersReducedMotion) {
+      gsap.from('.hero-title', {
+        scrollTrigger: { trigger: '.hero', start: 'top 80%', toggleActions: 'play none none none' },
+        scale: 0.9,
+        opacity: 0,
+        duration: 0.6,
+        ease: 'power2.out'
+      });
+      gsap.from('.hero-subtitle', {
+        scrollTrigger: { trigger: '.hero', start: 'top 80%', toggleActions: 'play none none none' },
+        y: 30,
+        opacity: 0,
+        duration: 0.6,
+        delay: 0.2,
+        ease: 'power2.out'
+      });
+      gsap.from('.hero-buttons a', {
+        scrollTrigger: { trigger: '.hero', start: 'top 80%', toggleActions: 'play none none none' },
+        opacity: 0,
+        y: 20,
+        duration: 0.4,
+        stagger: 0.2,
+        delay: 0.4,
+        ease: 'power2.out'
+      });
+      gsap.utils.toArray('.section-title').forEach(title => {
+        gsap.from(title, {
+          scrollTrigger: { trigger: title, start: 'top 80%', toggleActions: 'play none none none' },
+          x: -50,
+          opacity: 0,
+          duration: 0.6,
+          ease: 'power2.out'
+        });
+      });
+      gsap.utils.toArray('.section-divider').forEach(divider => {
+        gsap.from(divider, {
+          scrollTrigger: { trigger: divider, start: 'top 90%', toggleActions: 'play none none none' },
+          scale: 0.95,
+          opacity: 0,
+          duration: 0.4,
+          ease: 'back.out(1.7)'
+        });
+      });
+      gsap.utils.toArray('.card').forEach(card => {
+        gsap.from(card, {
+          scrollTrigger: { trigger: card, start: 'top 80%', toggleActions: 'play none none none' },
+          scale: 0.95,
+          opacity: 0,
+          duration: 0.4,
+          ease: 'power2.out'
+        });
+      });
+      gsap.utils.toArray('.content-text').forEach(text => {
+        gsap.from(text, {
+          scrollTrigger: { trigger: text, start: 'top 80%', toggleActions: 'play none none none' },
+          y: 30,
+          opacity: 0,
+          duration: 0.4,
+          ease: 'power2.out'
+        });
+      });
+      gsap.utils.toArray('.content-media').forEach(media => {
+        gsap.from(media, {
+          scrollTrigger: { trigger: media, start: 'top 80%', toggleActions: 'play none none none' },
+          x: 50,
+          opacity: 0,
+          duration: 0.4,
+          ease: 'power2.out'
+        });
+      });
+      gsap.from('.footer-links a', {
+        scrollTrigger: { trigger: 'footer', start: 'top 80%', toggleActions: 'play none none none' },
+        y: 20,
+        opacity: 0,
+        duration: 0.4,
+        stagger: 0.1,
+        ease: 'power2.out'
+      });
+    }
+
+    ScrollTrigger.create({
+      trigger: '#impact',
+      start: 'top 80%',
+      onEnter: () => {
+        animateCounter('yearsExperience', 21);
+        animateCounter('awardWinning', 5);
+        animateCounter('satisfiedCustomers', 500, 'k+');
+        animateCounter('projectsComplete', 50, '+');
+        animateCounter('happyCustomers', 500, '+');
+        animateProgressBars();
+      },
+      toggleActions: 'play none none none'
+    });
+
+    function voiceSearch(question) {
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = 'en-US';
+      recognition.start();
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript.toLowerCase();
+        document.querySelectorAll('.faq-header').forEach(header => {
+          if (header.textContent.toLowerCase().includes(transcript)) {
+            header.click();
+          }
+        });
+      };
+      recognition.onerror = () => alert('Voice recognition failed. Please try again.');
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    function filterBlog(category) {
+      document.querySelectorAll('.blog-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Add ripple effect to buttons
+    document.querySelectorAll('.btn-primary').forEach(button => {
+      button.addEventListener('click', function(e) {
+        const rect = button.getBoundingClientRect();
+        const span = document.createElement('span');
+        span.classList.add('ripple');
+        const diameter = Math.max(button.clientWidth, button.clientHeight);
+        const radius = diameter / 2;
+        span.style.width = span.style.height = `${diameter}px`;
+        span.style.left = `${e.clientX - rect.left - radius}px`;
+        span.style.top = `${e.clientY - rect.top - radius}px`;
+        button.appendChild(span);
+        setTimeout(() => span.remove(), 600);
+      });
+    });
+
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Sireet OEP",
+      "url": "https://sireetoep.co.ke",
+      "logo": "https://sireetoep.co.ke/assets/images/default-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+254789508040",
+        "contactType": "customer service",
+        "areaServed": "KE",
+        "availableLanguage": ["English"]
+      },
+      "sameAs": [
+        "https://instagram.com/sireetoep",
+        "https://facebook.com/sireetoep",
+        "https://twitter.com/sireetoep",
+        "https://linkedin.com/company/sireetoep"
+      ]
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(err => console.error('Service Worker registration failed:', err));
+    }
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9396918b595fadb3',t:'MTc0NjE3ODk0NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
